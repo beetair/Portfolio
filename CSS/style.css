@@ -1,0 +1,582 @@
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    width: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    background: transparent; /* прибери сірий фон */
+    color: white;
+}
+
+.center {
+    margin-left: 30%;
+    margin-right: 10%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    color: white;
+    margin-top: 5%;
+}
+
+h2{
+    font-family: 'Orbitron', sans-serif;
+    color: darkgray;
+    font-size: 30px;
+}
+
+body {
+    background: #000;
+    font-family: 'Orbitron', sans-serif; /* або Bank Gothic / схожий */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-card {
+    background: linear-gradient(180deg, #111, #000);
+    color: #fff;
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    text-align: center;
+    position: relative;
+    margin-left: 5%;
+    margin-top: 15%;
+}
+
+
+.status {
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.status .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: orange;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Фото */
+.avatar img {
+    width: 80%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Текст */
+.name {
+    font-family: 'Dancing Script', cursive; /* для підпису */
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.email {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.location {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.socials a img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    padding: 8px;
+    transition: 0.3s;
+}
+
+.socials a img:hover {
+    background: orange;
+}
+
+
+.cta {
+    width: 100%;
+    padding: 12px;
+    border-radius: 40px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: orange;
+    border-color: orange;
+}
+
+.arrow {
+    font-size: 18px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    width: 60px;
+    background: linear-gradient(180deg, #111, #000);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: 12px 0;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.sidebar a img {
+    width: 22px;
+    height: 22px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.sidebar a.active {
+    background: orange;
+    box-shadow: 0 0 15px orange;
+}
+
+.sidebar a.active img {
+    filter: brightness(0) invert(1);
+}
+
+.intro-section {
+    max-width: 800px;
+    margin: 8% auto;
+    color: white;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.small-title {
+    color: orange;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.main-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #f0f0f0;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.description {
+    color: rgba(255,255,255,0.7);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.tags span {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.tags span:hover {
+    background: orange;
+    color: black;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 200px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.08);
+}
+
+.stat-title {
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.stat-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 38px;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.link {
+    color: orange;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.projects {
+    margin-top: 100px;
+    color: white;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
+    color: orange;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.project {
+    margin-bottom: 80px;
+}
+
+.project-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.project-desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Карусель */
+.carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 16 / 9; /* підтримує пропорції */
+    object-fit: contain;  /* показує ціле фото без обрізання */
+    border-radius: 15px;
+    background: rgba(255,255,255,0.02); /* легкий фон щоб не було чорних країв */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: orange;
+    color: black;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tech-tags span {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.tech-tags span:hover {
+    background: orange;
+    color: black;
+}
+
+.center::-webkit-scrollbar {
+    display: none;
+}
+
+.center {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #111;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#openPdf {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0);
+}
+
+#openPdf:hover {
+    background: orange;
+    color: black;
+    border-color: orange;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Початковий стан — приховані */
+.stat-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+/* Коли активується (під час появи на екрані) */
+.stat-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Затримка для поступової появи */
+.stat-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+.stat-card:nth-child(2) {
+    transition-delay: 0.3s;
+}
+.stat-card:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.contact {
+    margin-top: 120px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.contact .section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
+    color: orange;
+    margin-bottom: 25px;
+}
+
+.contact-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    line-height: 1.6;
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px 40px;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 165, 0, 0.1);
+    border-color: orange;
+}
+
+.contact-card img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-card a,
+.contact-card p {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.contact-card a:hover {
+    color: orange;
+}
+
+.sidebar a {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar a.active {
+    background: white;
+    transform: scale(1.1);
+}
+
+.sidebar a.active img {
+    filter: invert(1);
+    transition: filter 0.3s ease;
+}

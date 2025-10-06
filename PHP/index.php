@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anton Reva - Portfolio</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<video autoplay muted loop id="bg-video">
+    <source src="/MOVIE/bg.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<div class="container">
+    <div class="left">
+        <div class="profile-card">
+            <div class="status">
+                <span class="dot"></span>Available
+            </div>
+
+            <div class="avatar">
+                <img src="/IMG/main.jpg" alt="Profile photo">
+            </div>
+
+            <h2 class="name">Anton</h2>
+            <p class="email">anton768zx@gmail.com</p>
+            <p class="location">Based in Hopedale, MA</p>
+
+            <div class="socials">
+                <a href="#"><img src="/IMG/x-icon.png" alt="X"></a>
+                <a href="#"><img src="/IMG/dribbble-icon.png" alt="Dribbble"></a>
+                <a href="https://www.instagram.com/beet_air/"><img src="/IMG/instagram-icon.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/profile.php?id=61561426256012"><img src="/IMG/facebook-icon.png" alt="Facebook"></a>
+            </div>
+
+            <button class="cta" id="scrollToContact">
+                Contact Me <span class="arrow">↗</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="intro-section">
+            <p class="small-title">• Introduction</p>
+            <h1 class="main-title">Building Digital Experiences That Matter</h1>
+            <p class="description">
+                I'm <strong>Anton Reva</strong>, a passionate <strong>Junior Developer</strong> with experience in
+                <span class="highlight">web</span> and <span class="highlight">game development</span>, constantly improving my skills and embracing new challenges.
+                My expertise includes <strong>HTML</strong>, <strong>CSS</strong>, <strong>PHP</strong>, <strong>jQuery</strong>, <strong>Bootstrap</strong>,
+                and version control using <strong>GitLab</strong>.
+            </p>
+
+            <p class="description">
+                I’ve worked as a <strong>freelance web developer</strong> for six months, creating custom websites for clients with animations,
+                responsive layouts, and advanced features. Later, I expanded my interests into <strong>game development</strong> using Unity and C#,
+                where I independently developed a <strong>3D horror game</strong> in just 2.5 months — learning AI systems, cutscenes, and core mechanics from scratch.
+            </p>
+
+            <p class="description">
+                Currently, I’m fully responsible for developing and maintaining a professional website and a custom <strong>iOS application</strong>
+                for <strong>MRIYA FIX LLC</strong>, a handyman company based in Massachusetts.
+                The application allows for creating and managing estimates with integrated database functionality.
+                <br>Website: <a href="https://mriyafix.com/" target="_blank" class="link">mriyafix.com</a>
+            </p>
+
+            <div class="tags">
+                <span>Web Development</span>
+                <span>Game Development</span>
+                <span>Unity & C#</span>
+                <span>iOS App Development</span>
+                <span>Bootstrap</span>
+                <span>PHP</span>
+                <span>CSS</span>
+                <span>HTML</span>
+                <span>JS</span>
+                <span>jQuery</span>
+                <span>Databases</span>
+                <span>C</span>
+                <span>GitLab</span>
+                <span>GitHub</span>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <p class="stat-title">Web Projects Completed</p>
+                    <h2>10+</h2>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-title">Games Developed</p>
+                    <h2>1</h2>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-title">iOS Apps Maintained</p>
+                    <h2>1</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECTS SECTION -->
+        <section class="projects" id="projects">
+            <h2 class="section-title">Projects</h2>
+
+            <!-- Website Project -->
+            <div class="project">
+                <h3 class="project-name">MRIYA FIX LLC — Website</h3>
+
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="/IMG/MRIYAFIXWEB_1.png" alt="Website Screenshot 1">
+                        <img src="/IMG/MRIYAFIXWEB_2.png" alt="Website Screenshot 2">
+                        <img src="/IMG/MRIYAFIXWEB_3.png" alt="Website Screenshot 3">
+                    </div>
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+
+                <p class="project-desc">
+                    A responsive website built for <strong>MRIYA FIX LLC</strong> — a handyman company based in Massachusetts.
+                    The site was designed to highlight the company’s services, portfolio, and contact information with a clean modern look.
+                    It includes a contact form, responsive layout, gallery section, and email integration.
+                    <br><br>
+                    <a href="https://mriyafix.com/" target="_blank" class="link">Visit Website →</a>
+                </p>
+
+                <div class="tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                    <span>Bootstrap</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+                </div>
+            </div>
+
+            <!-- iOS App Project -->
+            <div class="project">
+                <h3 class="project-name">MRIYA FIX LLC — iOS App</h3>
+
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="/IMG/EstimatePro_1.png" alt="App Screenshot 1">
+                        <img src="/IMG/EstimatePro_2.png" alt="App Screenshot 2">
+                        <img src="/IMG/EstimatePro_3.png" alt="App Screenshot 3">
+                        <img src="/IMG/EstimatePro_4.png" alt="App Screenshot 3">
+                    </div>
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+
+                <p class="project-desc">
+                    A custom iOS application designed for creating and managing project estimates.
+                    It includes client data storage, photo attachments, PDF generation, Supabase integration, and a clean UI built with SwiftUI.
+                    Each client receives a custom-configured version of the app.
+                    <br><br>
+                    <button id="openPdf">View Description →</button>
+
+                    <div id="pdfModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <iframe src="/FILES/EstimatePro_Description.pdf" width="100%" height="600px"></iframe>
+                        </div>
+                    </div>
+                </p>
+
+                <div class="tech-tags">
+                    <span>SwiftUI</span>
+                    <span>Supabase</span>
+                    <span>PDFKit</span>
+                    <span>Database Integration</span>
+                    <span>Custom Client Apps</span>
+                </div>
+            </div>
+
+            <!-- Horror Game Project -->
+            <div class="project">
+                <h3 class="project-name">Yokai: Echoes of Darkness — Horror Game</h3>
+
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="/IMG/Yokai_Echoes_of_Darkness_1.png" alt="Yokai Screenshot 1">
+                        <img src="/IMG/Yokai_Echoes_of_Darkness_2.png" alt="Yokai Screenshot 2">
+                        <img src="/IMG/Yokai_Echoes_of_Darkness_3.png" alt="Yokai Screenshot 3">
+                        <img src="/IMG/Yokai_Echoes_of_Darkness_4.png" alt="Yokai Screenshot 4">
+                        <img src="/IMG/Yokai_Echoes_of_Darkness_5.png" alt="Yokai Screenshot 4">
+                    </div>
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+
+                <p class="project-desc">
+                    <strong>Yokai: Echoes of Darkness</strong> is a 3D horror game where the player wakes up in an abandoned psychiatric hospital and must escape while being hunted by the blind demon Yokai.
+                    I developed the entire game in Unity within 2.5 months — handling AI, lighting, sound design, and all core gameplay systems on my own.
+                    <br><br>
+                    <a href="https://beetair.itch.io/yokai-echoes-of-darkness" target="_blank" class="link">Visit Website →</a>
+                </p>
+
+                <div class="tech-tags">
+                    <span>Unity</span>
+                    <span>C#</span>
+                    <span>AI System</span>
+                    <span>NavMesh</span>
+                    <span>Lighting System</span>
+                    <span>Cutscenes</span>
+                    <span>Level Design</span>
+                    <span>Sound Design</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="section-title">Contact Me</h2>
+
+            <p class="contact-text">
+                I'm always open to <strong>new opportunities</strong> and collaborations.<br>
+                Feel free to reach out for a project, a question, or just to say hi!
+            </p>
+
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <img src="/IMG/email-icon.png" alt="Email">
+                    <a href="mailto:anton768zx@gmail.com">anton768zx@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <img src="/IMG/location-icon.png" alt="Location">
+                    <p>Hopedale, Massachusetts</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="#" class="active"><img src="/IMG/home.png" alt="Home"></a>
+        <a href="#"><img src="/IMG/project-management.png" alt="Projects"></a>
+        <a href="#"><img src="/IMG/contact.png" alt="Pen"></a>
+    </div>
+</div>
+
+<script src="/JS/script.js"></script>
+</body>
+</html>
