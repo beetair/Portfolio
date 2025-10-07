@@ -55,10 +55,14 @@ h2{
 
 body {
     background: #000;
-    font-family: 'Orbitron', sans-serif; /* або Bank Gothic / схожий */
+    font-family: 'Inter', 'Poppins', sans-serif;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+h1, h2, h3, .section-title, .main-title {
+    font-family: 'Orbitron', sans-serif;
 }
 
 .profile-card {
