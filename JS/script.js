@@ -104,3 +104,48 @@ const activeObserver = new IntersectionObserver((entries) => {
 });
 
 observed.forEach(el => el && activeObserver.observe(el));
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const profileCard = document.getElementById('profileCard');
+    const closeProfile = document.getElementById('closeProfile');
+    const openProfile = document.getElementById('openProfile');
+
+    if (!profileCard || !closeProfile || !openProfile) return;
+
+    // Закриття картки
+    closeProfile.addEventListener('click', () => {
+        profileCard.classList.add('hide');
+        // після завершення анімації сховаємо її
+        profileCard.addEventListener('transitionend', function handler() {
+            profileCard.style.display = 'none';
+            openProfile.style.display = 'flex';
+            profileCard.removeEventListener('transitionend', handler);
+        });
+    });
+
+    // Відкриття картки
+    openProfile.addEventListener('click', () => {
+        openProfile.style.display = 'none';
+        profileCard.style.display = 'block'; // <- ось це головне
+        requestAnimationFrame(() => {
+            profileCard.classList.remove('hide');
+        });
+    });
+
+    // Якщо розширюємо екран — повертаємо картку автоматично
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 992) {
+            profileCard.style.display = 'block';
+            openProfile.style.display = 'none';
+            profileCard.classList.remove('hide');
+        } else {
+            // якщо малий екран і картка закрита — показуємо лише кнопку
+            if (profileCard.classList.contains('hide') || profileCard.style.display === 'none') {
+                openProfile.style.display = 'flex';
+            }
+        }
+    });
+});
