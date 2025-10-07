@@ -30,8 +30,11 @@ body, html {
     left: 0;
     bottom: 0;
     padding: 20px;
-    background: transparent; /* прибери сірий фон */
+    background: transparent;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .center {
@@ -67,8 +70,8 @@ body {
     box-shadow: 0 8px 25px rgba(0,0,0,0.6);
     text-align: center;
     position: relative;
-    margin-left: 5%;
-    margin-top: 15%;
+    /*margin-left: 5%;*/
+    /*margin-top: 15%;*/
 }
 
 
