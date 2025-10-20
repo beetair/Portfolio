@@ -1,4 +1,3 @@
-// ============== КАРУСЕЛЬ ==============
 document.querySelectorAll('.carousel').forEach(carousel => {
     const slides = carousel.querySelector('.slides');
     const images = slides.querySelectorAll('img');
@@ -23,7 +22,6 @@ document.querySelectorAll('.carousel').forEach(carousel => {
     updateSlide();
 });
 
-// ============== PDF Модалка ==============
 const modal = document.getElementById('pdfModal');
 const btn = document.getElementById('openPdf');
 const closeBtn = document.querySelector('.close');
@@ -34,7 +32,6 @@ if (btn && modal && closeBtn) {
     window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
 }
 
-// ============== Анімація статистики ==============
 const statObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -46,11 +43,9 @@ const statObserver = new IntersectionObserver((entries, obs) => {
 
 document.querySelectorAll('.stat-card').forEach(el => statObserver.observe(el));
 
-// ============== Навігація та підсвічування ==============
 const scroller = document.querySelector('.center');
 const sidebarLinks = document.querySelectorAll('.sidebar a');
 
-// цілі для скролу — ОДИН раз і з унікальним ім'ям
 const targets = {
     home: document.querySelector('.intro-section'),
     projects: document.querySelector('#projects'),
@@ -71,7 +66,6 @@ sidebarLinks[2].addEventListener('click', (e) => {
     targets.contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
-// кнопка "Contact Me"
 const contactBtn = document.getElementById('scrollToContact');
 if (contactBtn) {
     contactBtn.addEventListener('click', () => {
@@ -79,17 +73,14 @@ if (contactBtn) {
     });
 }
 
-// підсвічування активної іконки
 const observed = [targets.home, targets.projects, targets.contact];
 
 const activeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
 
-        // зняти активний стан
         sidebarLinks.forEach(l => l.classList.remove('active'));
 
-        // поставити згідно з таргетом
         if (entry.target === targets.home) {
             sidebarLinks[0].classList.add('active');
         } else if (entry.target === targets.projects) {
@@ -99,8 +90,8 @@ const activeObserver = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    root: scroller,        // ДИВИМОСЯ В СКРОЛ-КОНТЕЙНЕР .center
-    threshold: 0.35        // секція активна, коли видно ~35%
+    root: scroller,
+    threshold: 0.35
 });
 
 observed.forEach(el => el && activeObserver.observe(el));
@@ -118,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Закриття картки
     closeProfile.addEventListener('click', () => {
         profileCard.classList.add('hide');
-        // після завершення анімації сховаємо її
         profileCard.addEventListener('transitionend', function handler() {
             profileCard.style.display = 'none';
             openProfile.style.display = 'flex';
@@ -129,23 +119,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Відкриття картки
     openProfile.addEventListener('click', () => {
         openProfile.style.display = 'none';
-        profileCard.style.display = 'block'; // <- ось це головне
+        profileCard.style.display = 'block';
         requestAnimationFrame(() => {
             profileCard.classList.remove('hide');
         });
     });
 
-    // Якщо розширюємо екран — повертаємо картку автоматично
     window.addEventListener('resize', () => {
         if (window.innerWidth > 992) {
             profileCard.style.display = 'block';
             openProfile.style.display = 'none';
             profileCard.classList.remove('hide');
         } else {
-            // якщо малий екран і картка закрита — показуємо лише кнопку
             if (profileCard.classList.contains('hide') || profileCard.style.display === 'none') {
                 openProfile.style.display = 'flex';
             }
         }
     });
 });
+
+const introText = document.getElementById("introText");
+const toggleBtn = document.getElementById("toggleText");
+
+if (introText && toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+        const expanded = introText.classList.toggle("expanded");
+        introText.classList.toggle("collapsed", !expanded);
+        toggleBtn.textContent = expanded ? "Read Less ↑" : "Read More ↓";
+
+        if (expanded) {
+            introText.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    });
+}

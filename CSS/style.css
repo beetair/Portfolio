@@ -721,3 +721,43 @@ h1, h2, h3, .section-title, .main-title {
         display: none !important;
     }
 }
+
+.intro-text {
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.8s ease;
+}
+
+.intro-text.collapsed {
+    max-height: 150px;
+}
+
+.intro-text.expanded {
+    max-height: 1000px;
+}
+
+.more-text {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.intro-text.expanded .more-text {
+    opacity: 1;
+}
+
+.read-more {
+    background: transparent;
+    border: 1px solid orange;
+    color: orange;
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    background: orange;
+    color: black;
+}
