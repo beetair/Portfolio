@@ -720,6 +720,10 @@ h1, h2, h3, .section-title, .main-title {
     .profile-mini {
         display: none !important;
     }
+
+    .read-more {
+        margin-top: 10px;
+    }
 }
 
 .intro-text {
